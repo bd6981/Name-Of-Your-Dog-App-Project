@@ -1,0 +1,23 @@
+// import './App.css';
+// import {useState, setState} from 'react';
+// import { Test } from './Test';
+// import BreedList from './Comp/BreedList';
+
+
+
+// // https://www.youtube.com/watch?v=4oCVDkb_EIs
+// function App() {
+//   const [isToggled, setIsToggled] = useState(false)
+//   return (
+//     <div className="App">
+//       <BreedList isToggled={isToggled}
+//       <button onClick={()=> setIsToggled(!isToggled)}>Toggled</button>
+//       {/* {isToggled && <Test />} */}
+//       {isToggled ? <Test /> : <p>the value is false</p>} 
+//       {/* <Test /> */}
+//     </div>
+//   );
+// }
+
+
+// export default App;
