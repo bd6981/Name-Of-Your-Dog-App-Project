@@ -1,23 +1,30 @@
+import React, { useState } from "react";
 
-import axios from "axios";
-import { useState, useEffect } from "react";
-import {useParams} from 'react-router-dom';
+const RandomDogs = ({setRandomDogBreed, getRandoDog, randomDog, }) => {
 
-function RandomDogs ({randomDog, setRandomDog,}) {
+    const [randomBreedInput, setRandomBreedInput] = useState('')
 
-function dogPic () {
-return (
-    <div>
-        <form onSubmit={(e) => {e.preventDefault()
-            setRandomDog()}}>
-            <input onChange={(e) => setInput(e.target.value)}></input>
-            <button onClick='submit'>Random Dog</button>
-            </form>
-        <img src={randomDog}/>
-    </div>
+    const handleChange = (event) => {
+        setRandomBreedInput(event.target.value)
+    }
+
+    const handleSubmit = () => {
+        setRandomDogBreed(randomBreedInput)
+        getRandoDog()
+    }
+
+    
+
+    return (
+        <div className="randomPup">
+            <h3>random dog picture</h3>
+            <div className="form">
+                <input type='text' placeholder="Enter dog breed" onChange={handleChange}></input>
+                <button onClick={handleSubmit}>search</button>
+            </div>
+            {randomDog && <img src={randomDog} alt='dog' ></img>}
+        </div>
+
     )
-}
-}
-export default RandomDogs;
-
-
+    }
+export default RandomDogs
